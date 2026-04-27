@@ -101,6 +101,32 @@ const AppLayout = () => {
             </ul>
           </div>
 
+          {/* Col 4 — Location Map */}
+          <div className="footer-col">
+            <h4 className="footer-col-title">Find Us</h4>
+            <div className="footer-map-wrap">
+              <iframe
+                title="MaJun Hotel Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.4661!2d78.1198!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f12084!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <a
+              className="footer-map-link"
+              href="https://maps.google.com/?q=Madurai,Tamil+Nadu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="12" height="12">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Get Directions
+            </a>
+          </div>
+
         </div>
 
         {/* Bottom bar */}
