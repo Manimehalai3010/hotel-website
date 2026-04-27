@@ -1,4 +1,4 @@
-import { Layout, Button, Row, Col } from "antd";
+import { Layout } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
@@ -105,158 +105,151 @@ const Home = () => {
 
   return (
     <div className="container">
-    <Layout style={{ background: "var(--bg-main)" }}>
-      <Content>
+      <Layout style={{ background: "var(--bg-main)" }}>
+        <Content>
 
-        {/* ── HERO WITH VIDEO ── */}
-        <section className="hero-video-section">
-          <video
-            ref={videoRef}
-            className="hero-video"
-            src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          <div className="hero-video-overlay" />
-          <div className="hero-content">
-            <div className="hero-badge reveal">Luxury Hotel</div>
+          {/* ── HERO WITH VIDEO ── */}
+          <section className="hero-video-section">
+            <video
+              ref={videoRef}
+              className="hero-video"
+              src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="hero-video-overlay" />
+            <div className="hero-content">
+              <div className="hero-badge reveal">Luxury Hotel</div>
 
-<h1 className="hero-title reveal">
-  Experience Comfort<br />
-  <span className="hero-title-accent">Like Never Before</span>
-</h1>
+              <h1 className="hero-title reveal">
+                Experience Comfort<br />
+                <span className="hero-title-accent">Like Never Before</span>
+              </h1>
 
-<p className="hero-subtitle reveal">
-  Book your stay with us and enjoy world-class hospitality,
-  luxury rooms, and premium facilities.
-</p>
-            <div className="hero-actions reveal">
-              <button className="btn-hero-primary" onClick={() => navigate("/contact")}>
-                Get Started Free
-              </button>
-              <button className="btn-hero-primary" onClick={() => navigate("/facilities")}>
-                See How It Works
-              </button>
-            </div>
-          </div>
+              <p className="hero-subtitle reveal">
+                Book your stay with us and enjoy world-class hospitality,
+                luxury rooms, and premium facilities.
+              </p>
 
-          {/* Floating glass stats */}
-          <div className="hero-stats-bar reveal">
-            {stats.map((s, i) => (
-              <div className="hero-stat-item" key={i}>
-                <span className="hero-stat-value">{s.value}</span>
-                <span className="hero-stat-label">{s.label}</span>
+              <div className="hero-actions reveal">
+                <button className="btn-hero-primary" onClick={() => navigate("/contact")}>
+                  Get Started Free
+                </button>
+                <button className="btn-hero-ghost" onClick={() => navigate("/facilities")}>
+                  See How It Works
+                </button>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── FEATURES GRID ── */}
-        <section className="features-section">
-          <div className="section-header reveal">
-            <span className="section-tag">What We Offer</span>
-            <h2>Everything you need to grow</h2>
-            <p>One platform. All the tools. Zero compromises.</p>
-          </div>
-          <div className="features-grid">
-            {features.map((item, i) => (
-              <GlassCard key={i} {...item} delay={i * 80} />
-            ))}
-          </div>
-        </section>
-
-        {/* ── VIDEO SHOWCASE ── */}
-        <section className="showcase-section reveal">
-  {/* LEFT CONTENT */}
-  <div className="showcase-text">
-    <span className="section-tag">Luxury Experience</span>
-    <h2>Enjoy a Comfortable & Memorable Stay</h2>
-
-    <p>
-      Experience world-class hospitality with elegant rooms, modern amenities,
-      and personalized services designed for your comfort.
-    </p>
-
-    <ul className="showcase-list">
-      <li><span className="check">✓</span> Spacious luxury rooms</li>
-      <li><span className="check">✓</span> 24/7 room service</li>
-      <li><span className="check">✓</span> Premium dining experience</li>
-      <li><span className="check">✓</span> Relaxing spa & wellness</li>
-    </ul>
-
-    <button
-      className="btn-hero-primary"
-      onClick={() => navigate("/contact")}
-    >
-      Book Your Stay
-    </button>
-  </div>
-
-  {/* RIGHT IMAGE */}
-  <div className="showcase-video-wrap">
-  <video
-    className="showcase-video"
-    src="https://www.pexels.com/download/video/33625582/"
-    autoPlay
-    muted
-    loop
-    playsInline
-  />
-  <div className="showcase-video-overlay"></div>
-</div>
-</section>
-
-        {/* ── TESTIMONIALS ── */}
-<section className="testimonials-section">
-  <div className="section-header reveal">
-    <span className="section-tag">Client Reviews</span>
-    <h2>What our clients say</h2>
-    <p>Trusted by thousands of businesses worldwide.</p>
-  </div>
-
-  <div className="testimonials-track-wrapper">
-    <div className="testimonials-track">
-      {[...testimonials, ...testimonials].map((t, i) => (
-        <div className="testimonial-card" key={i}>
-          <div className="testimonial-stars">{"★".repeat(5)}</div>
-          <p className="testimonial-text">"{t.text}"</p>
-          <div className="testimonial-author">
-            <div className="testimonial-avatar">{t.initials}</div>
-            <div>
-              <p className="testimonial-name">{t.name}</p>
-              <p className="testimonial-role">{t.role}</p>
             </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
-        {/* ── CTA BANNER ── */}
-        <section className="cta-section reveal">
-          <div className="cta-glass">
-            <h2>Ready to grow faster?</h2>
-            <p>Join 10,000+ businesses already using MyAnalytics.</p>
-            <div className="hero-actions">
-              <button className="btn-hero-primary" onClick={() => navigate("/contact")}>
-                Start for Free
-              </button>
-              <button className="btn-hero-ghost" onClick={() => navigate("/contact")}>
-                Talk to Sales
+            {/* Floating stats */}
+            <div className="hero-stats-bar reveal">
+              {stats.map((s, i) => (
+                <div className="hero-stat-item" key={i}>
+                  <span className="hero-stat-value">{s.value}</span>
+                  <span className="hero-stat-label">{s.label}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── FEATURES GRID ── */}
+          <section className="features-section">
+            <div className="section-header reveal">
+              <span className="section-tag">What We Offer</span>
+              <h2>Everything you need for a perfect stay</h2>
+              <p>One hotel. All the comforts. Zero compromises.</p>
+            </div>
+            <div className="features-grid">
+              {features.map((item, i) => (
+                <GlassCard key={i} {...item} delay={i * 80} />
+              ))}
+            </div>
+          </section>
+
+          {/* ── SHOWCASE ── */}
+          <section className="showcase-section reveal">
+            {/* LEFT CONTENT */}
+            <div className="showcase-text">
+              <span className="section-tag">Luxury Experience</span>
+              <h2>Enjoy a Comfortable & Memorable Stay</h2>
+              <p>
+                Experience world-class hospitality with elegant rooms, modern amenities,
+                and personalized services designed for your comfort.
+              </p>
+              <ul className="showcase-list">
+                <li><span className="check">✓</span> Spacious luxury rooms</li>
+                <li><span className="check">✓</span> 24/7 room service</li>
+                <li><span className="check">✓</span> Premium dining experience</li>
+                <li><span className="check">✓</span> Relaxing spa & wellness</li>
+              </ul>
+              <button
+                className="btn-hero-primary"
+                onClick={() => navigate("/contact")}
+              >
+                Book Your Stay
               </button>
             </div>
-          </div>
-        </section>
 
-      </Content>
+            {/* RIGHT VIDEO */}
+            <div className="showcase-video-wrap">
+              <video
+                className="showcase-video"
+                src="https://www.pexels.com/download/video/33625582/"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <div className="showcase-video-overlay"></div>
+            </div>
+          </section>
 
-      <Footer className="footer" style={{ background: "var(--bg-card)", color: "var(--text-main)" }}>
-        © 2026 MyAnalytics · Contact · Privacy Policy
-      </Footer>
-    </Layout>
+          {/* ── TESTIMONIALS ── */}
+          <section className="testimonials-section">
+            <div className="section-header reveal">
+              <span className="section-tag">Client Reviews</span>
+              <h2>What our guests say</h2>
+              <p>Trusted by thousands of happy travellers.</p>
+            </div>
+            <div className="testimonials-track-wrapper">
+              <div className="testimonials-track">
+                {[...testimonials, ...testimonials].map((t, i) => (
+                  <div className="testimonial-card" key={i}>
+                    <div className="testimonial-stars">{"★".repeat(5)}</div>
+                    <p className="testimonial-text">"{t.text}"</p>
+                    <div className="testimonial-author">
+                      <div className="testimonial-avatar">{t.initials}</div>
+                      <div>
+                        <p className="testimonial-name">{t.name}</p>
+                        <p className="testimonial-role">{t.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── CTA BANNER ── */}
+          <section className="cta-section reveal">
+            <div className="cta-glass">
+              <h2>Ready for an unforgettable stay?</h2>
+              <p>Join thousands of guests who have experienced our hospitality.</p>
+              <div className="hero-actions">
+                <button className="btn-hero-primary" onClick={() => navigate("/contact")}>
+                  Book Now
+                </button>
+                <button className="btn-hero-ghost" onClick={() => navigate("/contact")}>
+                  Talk to Us
+                </button>
+              </div>
+            </div>
+          </section>
+
+        </Content>
+      </Layout>
     </div>
   );
 };
