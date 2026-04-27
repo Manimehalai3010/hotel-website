@@ -349,7 +349,7 @@ body {
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: scrollLeft 35s linear infinite;
+  animation: scrollLeft 10s linear infinite;
 }
 
 /* Pause on hover */
